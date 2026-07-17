@@ -1,0 +1,1 @@
+cors:Cross-Origin Resource Sharing (CORS) headers are HTTP headers used by a backend server to instruct web browsers to allow front-end applications running at a different domain to safely interact with its resources
