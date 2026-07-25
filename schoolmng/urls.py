@@ -20,6 +20,9 @@ from django.contrib import admin
 from django.urls import path
 from rest_framework.routers import DefaultRouter
 from api.views import StudentModelViewset
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 
 routes=DefaultRouter()
@@ -27,4 +30,4 @@ routes.register('student',StudentModelViewset,basename='student')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]+routes.urls
+]+routes.urls + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
